@@ -25,6 +25,7 @@ dependencies = [
     "beautifulsoup4>=4.15.0",
     "httpx>=0.28.1",
     "mcp[cli]>=2.2.0",
+    "tzdata>=2025.2 ; sys_platform == 'win32'",
 ]
 
 [project.urls]

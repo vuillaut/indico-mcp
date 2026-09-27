@@ -22,6 +22,7 @@ First public release.
 ### Fixed
 
 - Event and category results gave times in the Indico server's timezone instead of the event's. They are now converted to the event's timezone. Search results, which Indico gives in UTC, now say so.
+- Timezones failed on Windows, which has no system timezone database. The package now depends on `tzdata` there.
 
 [Unreleased]: https://github.com/vuillaut/indico-mcp/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/vuillaut/indico-mcp/releases/tag/v0.1.0

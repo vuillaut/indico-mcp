@@ -23,13 +23,28 @@
     "url": "https://www.python.org"
   },
   "runtimePlatform": "Python 3.12, Python 3.13",
-  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
   "applicationCategory": "Scientific event management",
-  "keywords": ["Indico", "MCP", "Model Context Protocol", "AI agents", "LLM", "events", "conferences", "timetable", "physics"],
+  "keywords": [
+    "Indico",
+    "MCP",
+    "Model Context Protocol",
+    "AI agents",
+    "LLM",
+    "events",
+    "conferences",
+    "timetable",
+    "physics"
+  ],
   "softwareRequirements": [
     "beautifulsoup4>=4.15.0",
     "httpx>=0.28.1",
-    "mcp[cli]>=2.2.0"
+    "mcp[cli]>=2.2.0",
+    "tzdata (Windows only)"
   ],
   "author": [
     {
