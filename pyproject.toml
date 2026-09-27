@@ -1,0 +1,65 @@
+[project]
+name = "indico-mcp"
+version = "0.1.0"
+description = "MCP server that lets AI agents read and manage Indico events"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Thomas Vuillaume", email = "thomas.vuillaume@lapp.in2p3.fr" }
+]
+requires-python = ">=3.12"
+keywords = ["indico", "mcp", "model-context-protocol", "ai-agents", "events", "conferences", "physics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Scheduling",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=2.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/vuillaut/indico-mcp"
+Documentation = "https://vuillaut.github.io/indico-mcp/"
+Repository = "https://github.com/vuillaut/indico-mcp"
+Issues = "https://github.com/vuillaut/indico-mcp/issues"
+Changelog = "https://github.com/vuillaut/indico-mcp/blob/main/CHANGELOG.md"
+
+[project.scripts]
+indico-mcp = "indico_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "respx>=0.23.1",
+    "ruff>=0.16.9",
+]
+docs = [
+    "mkdocs>=1.6,<2",
+    "mkdocs-material>=9.7.7",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

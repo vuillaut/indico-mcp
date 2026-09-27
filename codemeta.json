@@ -1,0 +1,54 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "indico-mcp",
+  "description": "MCP server that lets AI agents read and manage events on one or more Indico servers: search events, read timetables, create events, sessions and contributions, schedule talks, attach material and handle registrations.",
+  "version": "0.1.0",
+  "softwareVersion": "0.1.0",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/vuillaut/indico-mcp",
+  "issueTracker": "https://github.com/vuillaut/indico-mcp/issues",
+  "url": "https://vuillaut.github.io/indico-mcp/",
+  "readme": "https://github.com/vuillaut/indico-mcp/blob/main/README.md",
+  "continuousIntegration": "https://github.com/vuillaut/indico-mcp/actions",
+  "buildInstructions": "https://vuillaut.github.io/indico-mcp/how-to/install/",
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "dateCreated": "2026-09-27",
+  "dateModified": "2026-09-27",
+  "datePublished": "2026-09-27",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "Python",
+    "version": ">=3.12",
+    "url": "https://www.python.org"
+  },
+  "runtimePlatform": "Python 3.12, Python 3.13",
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Scientific event management",
+  "keywords": ["Indico", "MCP", "Model Context Protocol", "AI agents", "LLM", "events", "conferences", "timetable", "physics"],
+  "softwareRequirements": [
+    "beautifulsoup4>=4.15.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=2.2.0"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Thomas",
+      "familyName": "Vuillaume",
+      "email": "thomas.vuillaume@lapp.in2p3.fr",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Laboratoire d'Annecy de Physique des Particules (LAPP), CNRS/IN2P3"
+      }
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Thomas",
+      "familyName": "Vuillaume",
+      "email": "thomas.vuillaume@lapp.in2p3.fr"
+    }
+  ]
+}

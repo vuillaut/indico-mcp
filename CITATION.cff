@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: indico-mcp
+abstract: >-
+  MCP server that lets AI agents read and manage events on one or more
+  Indico servers: search events, read timetables, create events, sessions
+  and contributions, schedule talks, attach material and handle registrations.
+authors:
+  - given-names: Thomas
+    family-names: Vuillaume
+    affiliation: Laboratoire d'Annecy de Physique des Particules (LAPP), CNRS/IN2P3
+version: 0.1.0
+date-released: "2026-09-27"
+license: MIT
+repository-code: https://github.com/vuillaut/indico-mcp
+url: https://vuillaut.github.io/indico-mcp/
+keywords:
+  - Indico
+  - MCP
+  - Model Context Protocol
+  - AI agents
+  - conferences
+  - physics

@@ -1,0 +1,77 @@
+site_name: indico-mcp
+site_description: MCP server that lets AI agents read and manage Indico events
+site_url: https://vuillaut.github.io/indico-mcp/
+repo_url: https://github.com/vuillaut/indico-mcp
+repo_name: vuillaut/indico-mcp
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Thomas Vuillaume. MIT license.
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.action.edit
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - tutorials/index.md
+      - Explore a conference on CERN's Indico: tutorials/explore-cern.md
+      - Build a meeting agenda: tutorials/build-an-agenda.md
+  - How-to guides:
+      - how-to/index.md
+      - Install the server: how-to/install.md
+      - Connect an MCP client: how-to/connect-clients.md
+      - Manage tokens: how-to/tokens.md
+      - Connect to several Indico servers: how-to/multiple-instances.md
+      - Limit what the agent can do: how-to/restrict.md
+      - Attach slides and links: how-to/attach-material.md
+      - Run the server over HTTP: how-to/http-server.md
+      - Troubleshoot: how-to/troubleshooting.md
+      - Develop and contribute: how-to/develop.md
+  - Reference:
+      - reference/index.md
+      - Tools: reference/tools.md
+      - Configuration: reference/configuration.md
+      - Ids: reference/ids.md
+      - Indico endpoints: reference/endpoints.md
+  - Explanation:
+      - explanation/index.md
+      - How the server talks to Indico: explanation/how-it-works.md
+      - Safety model: explanation/safety.md
+      - Design choices: explanation/design.md
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
