@@ -10,6 +10,7 @@ authors:
   - given-names: Thomas
     family-names: Vuillaume
     affiliation: Laboratoire d'Annecy de Physique des Particules (LAPP), CNRS/IN2P3
+    orcid: https://orcid.org/0000-0002-5686-2078
 version: 0.1.0
 date-released: "2026-09-27"
 license: MIT
