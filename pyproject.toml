@@ -38,7 +38,7 @@ Changelog = "https://github.com/vuillaut/indico-mcp/blob/main/CHANGELOG.md"
 indico-mcp = "indico_mcp:main"
 
 [build-system]
-requires = ["uv_build>=0.11.32,<0.12.0"]
+requires = ["uv_build>=0.11.32,<0.13.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
