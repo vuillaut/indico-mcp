@@ -4,6 +4,10 @@ All notable changes are listed here. The format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Added
+
+- `indico_list_favorite_categories`: list the token user's favourite categories.
+
 ## [0.1.0] - 2026-09-27
 
 First public release.

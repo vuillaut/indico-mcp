@@ -13,6 +13,7 @@ Without a token, the server sees what an anonymous visitor sees: public events a
     | Classic API (read only) | reading protected events |
     | Everything (all methods) | every write tool, and `indico_list_contributions` |
     | Registrants | registration forms, registrations, check-in |
+    | Everything (only GET) or Everything (all methods) | `indico_list_favorite_categories` |
     | User information | `indico_whoami` |
 
 4. Copy the token (`indp_...`). Indico shows it once.

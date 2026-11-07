@@ -12,6 +12,7 @@ Kinds:
 | Tool | Method and path | Kind |
 |---|---|---|
 | `indico_whoami` | `GET /api/user/` | api |
+| `indico_list_favorite_categories` | `GET /user/api/favorites/categories` | rest |
 | `indico_search_events` | `GET /export/event/search/<query>.json` | export |
 | `indico_list_category_events` | `GET /export/categ/<category>.json` | export |
 | `indico_get_event` | `GET /export/event/<event>.json` | export |

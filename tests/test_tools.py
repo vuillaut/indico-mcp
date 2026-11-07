@@ -302,6 +302,36 @@ async def test_indico_json_errors_are_readable(settings):
     assert "HTTP 403" in message and "Access Denied - You cannot manage this event" in message
 
 
+@respx.mock
+async def test_list_favorite_categories(settings):
+    route = respx.get(BASE + "/user/api/favorites/categories").respond(
+        json={
+            "9": {"id": 9, "title": "Zeta", "url": BASE + "/category/9/", "chain_titles": ["Home"]},
+            "7": {"id": 7, "title": "Physics", "url": BASE + "/category/7/", "chain_titles": ["Home"]},
+        }
+    )
+
+    is_error, result = await call(settings, "indico_list_favorite_categories")
+
+    assert not is_error, result
+    assert [c["id"] for c in result["categories"]] == [7, 9]  # sorted by chain, then title
+    assert route.calls.last.request.headers["authorization"] == "Bearer indp_test"
+
+
+@respx.mock
+async def test_list_favorite_categories_empty(settings):
+    respx.get(BASE + "/user/api/favorites/categories").respond(json={})
+    is_error, result = await call(settings, "indico_list_favorite_categories")
+    assert not is_error and result == {"categories": []}
+
+
+@respx.mock
+async def test_list_favorite_categories_forbidden(settings):
+    respx.get(BASE + "/user/api/favorites/categories").respond(status_code=403)
+    is_error, message = await call(settings, "indico_list_favorite_categories")
+    assert is_error and "HTTP 403" in message
+
+
 CERN = "https://indico.cern.ch"
 HD = "https://indico.physi.uni-heidelberg.de"
 

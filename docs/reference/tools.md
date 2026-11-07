@@ -23,6 +23,13 @@ List the Indico instances this server can reach; pass a name as `instance` to th
 
 Return the Indico user the token belongs to (null when anonymous).
 
+### `indico_list_favorite_categories`
+
+List the categories the token's user marked as favourites.
+
+Each has id, title, url and chain_titles (the parent categories). Needs a token with an
+'Everything' scope.
+
 ### `indico_search_events`
 
 Search events by title. Only returns events the token's user can see.

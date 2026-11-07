@@ -112,6 +112,15 @@ def create_server(settings: Settings) -> MCPServer:
         return await client(ctx, instance).get_json("/api/user/")
 
     @tool(READ)
+    async def indico_list_favorite_categories(ctx: Context, instance: InstanceName = None) -> dict[str, Any]:
+        """List the categories the token's user marked as favourites.
+
+        Each has id, title, url and chain_titles (the parent categories). Needs a token with an
+        'Everything' scope."""
+        favorites = await client(ctx, instance).rest("GET", "/user/api/favorites/categories")
+        return {"categories": sorted((favorites or {}).values(), key=lambda c: c["chain_titles"] + [c["title"]])}
+
+    @tool(READ)
     async def indico_search_events(
         ctx: Context,
         query: Annotated[str, Field(description="Words from the event title")],
